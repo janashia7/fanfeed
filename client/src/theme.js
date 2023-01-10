@@ -24,7 +24,7 @@ export const colorTokens = {
     600: '#00A0BC',
     700: '#006B7D',
     800: '#00353F',
-    900: '#001519', 
+    900: '#001519',
   },
 };
 
@@ -69,6 +69,34 @@ export const themeSettings = (mode) => {
               alt: colorTokens.grey[0],
             },
           }),
+    },
+    typography: {
+      fontFamily: ['Rubik', 'sans-serif'].join(','),
+      fontSize: 12,
+      h1: {
+        fontFamily: ['Rubik', 'sans-serif'].join(','),
+        fontSize: 40,
+      },
+      h2: {
+        fontFamily: ['Rubik', 'sans-serif'].join(','),
+        fontSize: 32,
+      },
+      h3: {
+        fontFamily: ['Rubik', 'sans-serif'].join(','),
+        fontSize: 24,
+      },
+      h4: {
+        fontFamily: ['Rubik', 'sans-serif'].join(','),
+        fontSize: 20,
+      },
+      h5: {
+        fontFamily: ['Rubik', 'sans-serif'].join(','),
+        fontSize: 16,
+      },
+      h6: {
+        fontFamily: ['Rubik', 'sans-serif'].join(','),
+        fontSize: 14,
+      },
     },
   };
 };
