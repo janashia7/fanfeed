@@ -1,4 +1,11 @@
-import { useMediaQuery, useTheme, Typography } from '@mui/material';
+import { Search } from '@mui/icons-material';
+import {
+  useMediaQuery,
+  useTheme,
+  Typography,
+  InputBase,
+  IconButton,
+} from '@mui/material';
 import FlexBetween from 'components/FlexBetween';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -34,8 +41,29 @@ const Navbar = () => {
               cursor: 'pointer',
             },
           }}
-        >FanFeed</Typography>
+        >
+          FanFeed
+        </Typography>
+        {isNonMobileScreens && (
+          <FlexBetween
+            backgroundColor={neutralLight}
+            borderRadius="9px"
+            gap="3rem"
+            padding="0.1rem 1.5rem"
+          >
+            <InputBase placeholder="Search..." />
+            <IconButton>
+              <Search />
+            </IconButton>
+          </FlexBetween>
+        )}
       </FlexBetween>
+      // Desktop Nav
+      {isNonMobileScreens ? (
+        <FlexBetween></FlexBetween>
+      ) : (
+        <IconButton></IconButton>
+      )}
     </FlexBetween>
   );
 };
