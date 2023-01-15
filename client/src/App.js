@@ -14,7 +14,6 @@ const App = () => {
   const mode = useSelector((state) => state.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
 
-  console.log(theme);
   return (
     <div className="app">
       <BrowserRouter>
